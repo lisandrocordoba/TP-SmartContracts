@@ -1,0 +1,26 @@
+# Foundry (Ethereum)
+ethereum/out/
+ethereum/cache/
+ethereum/broadcast/
+
+# Aiken (Cardano)
+cardano/build/
+cardano/artifacts/
+
+# Node / env
+node_modules/
+.env
+.env.*
+
+# Imagenes de contenedor exportadas
+*.tar
+*.tar.gz
+
+# Editores / SO
+.DS_Store
+.vscode/
+.idea/
+
+# Temporales de compilacion documental (LaTeX / otros)
+*.aux
+*.log

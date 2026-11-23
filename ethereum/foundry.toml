@@ -1,0 +1,27 @@
+[profile.default]
+src = "src"
+out = "out"
+libs = ["lib"]
+solc_version = "0.8.26"
+# test/halmos/ se corre con `halmos`, no con `forge test`
+no_match_path = "test/halmos/*"
+# Evita deployCode(string) en forge >= 1.8 que halmos no soporta
+dynamic_test_linking = false
+
+[fuzz]
+runs = 256
+
+[invariant]
+runs = 256
+depth = 50
+
+# SMTChecker (opcional: descomentar y correr `forge build --force`)
+# [profile.default.model_checker]
+# contracts = { "src/Contrato.sol" = ["Contrato"] }
+# engine           = "chc"
+# solvers          = ["z3", "eld"]
+# targets          = ["assert", "overflow", "underflow", "divByZero"]
+# timeout          = 20000
+# show_unsupported = true
+# show_unproved    = true
+# show_proved_safe = true
